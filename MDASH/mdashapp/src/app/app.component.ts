@@ -25,7 +25,7 @@ import {
 
 export class AppComponent {
   constructor(
-      private proAppConfigService: ProAppConfigService // Inje��o do Servi�o Protheus
+      private proAppConfigService: ProAppConfigService // Injeção do Serviço Protheus
   ) {}
 
   readonly menus: Array<PoMenuItem> = [
