@@ -1,0 +1,22 @@
+import { provideRouter } from '@angular/router';
+
+import { routes } from './app.routes';
+import { provideClientHydration, withEventReplay } from '@angular/platform-browser';
+
+import { ApplicationConfig, importProvidersFrom, provideZoneChangeDetection } from '@angular/core';
+import { provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
+
+import { PoHttpRequestModule } from '@po-ui/ng-components';
+
+import { ProtheusLibCoreModule } from '@totvs/protheus-lib-core';
+
+export const appConfig: ApplicationConfig = {
+  providers: [
+    provideRouter(routes),
+    provideHttpClient(),
+    importProvidersFrom([PoHttpRequestModule, ProtheusLibCoreModule]),
+    provideZoneChangeDetection({ eventCoalescing: true }),
+    provideHttpClient(withInterceptorsFromDi()),
+  ],
+  
+};
