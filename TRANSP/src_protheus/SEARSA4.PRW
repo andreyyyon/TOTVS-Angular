@@ -7,15 +7,15 @@
 
 /*/
 
-WSRESTFUL zSEARSA4 DESCRIPTION 'Consulta de Transportadoras'
+WSRESTFUL SEARSA4 DESCRIPTION 'Consulta de Transportadoras'
     //Atributos
     WSDATA id         AS STRING
  
     //Métodos
-    WSMETHOD GET    ID     DESCRIPTION 'Retorna o registro pesquisado' WSSYNTAX '/zSEARSA4/get_id?{id}'                       PATH 'get_id'        PRODUCES APPLICATION_JSON
+    WSMETHOD GET    ID     DESCRIPTION 'Retorna o registro pesquisado' WSSYNTAX '/SEARSA4/get_id?{id}'                       PATH 'get_id'        PRODUCES APPLICATION_JSON
 END WSRESTFUL
 
-WSMETHOD GET ID WSRECEIVE id WSSERVICE zSEARSA4
+WSMETHOD GET ID WSRECEIVE id WSSERVICE SEARSA4
     Local lRet       := .T.
     Local jResponse  := JsonObject():New()
     Local cAliasWS   := 'SA4'
