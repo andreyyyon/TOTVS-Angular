@@ -3,14 +3,8 @@
 #Include "RESTFul.ch"
 #Include "TopConn.ch"
 
-/*/{Protheus.doc} WSRESTFUL zSEARSA4
-Consulta de Transportadoras
-@author Atilio
-@since 18/06/2025
-@version 1.0
-@type wsrestful
-@obs Codigo gerado automaticamente pelo Autumn Code Maker
-@see http://autumncodemaker.com
+/*/
+
 /*/
 
 WSRESTFUL zSEARSA4 DESCRIPTION 'Consulta de Transportadoras'
@@ -20,17 +14,6 @@ WSRESTFUL zSEARSA4 DESCRIPTION 'Consulta de Transportadoras'
     //Métodos
     WSMETHOD GET    ID     DESCRIPTION 'Retorna o registro pesquisado' WSSYNTAX '/zSEARSA4/get_id?{id}'                       PATH 'get_id'        PRODUCES APPLICATION_JSON
 END WSRESTFUL
-
-/*/{Protheus.doc} WSMETHOD GET ID
-Busca registro via ID
-@author Atilio
-@since 18/06/2025
-@version 1.0
-@type method
-@param id, Caractere, String que será pesquisada através do MsSeek
-@obs Codigo gerado automaticamente pelo Autumn Code Maker
-@see http://autumncodemaker.com
-/*/
 
 WSMETHOD GET ID WSRECEIVE id WSSERVICE zSEARSA4
     Local lRet       := .T.
