@@ -1,0 +1,6 @@
+{
+    "name": "search-transp",
+    "version": "1.0.0",
+    "productLine": "Protheus",
+    "api_baseUrl": "https://mamydoces185550.protheus.cloudtotvs.com.br:11024/rest"
+}
