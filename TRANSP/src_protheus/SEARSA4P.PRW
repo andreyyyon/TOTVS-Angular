@@ -5,9 +5,9 @@
 */
 
 User Function SEARSA4P()
-    Local aArea := FWGetArea()
+    // Local aArea := FWGetArea()
 
     FwCallApp("search-transp")
 
-    FWRestArea()
+    // FWRestArea()
 Return
